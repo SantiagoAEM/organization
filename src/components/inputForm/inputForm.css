@@ -1,0 +1,15 @@
+.signForm-inputs{
+margin: 1.5rem 0;
+font-family: var(--ff-secondary);
+}
+
+
+.signForm-inputs input{
+    font-size: var(--fs-small);
+    width: 100%;
+    box-shadow: 10px 10px 30px 0px #0000000F;
+    border: none;
+    padding: 30px 20px;
+    outline-color:var(--clr-primary);
+    margin:8px 0;
+}

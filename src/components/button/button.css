@@ -1,0 +1,14 @@
+.signForm-button{
+    background-color: var(--clr-primary);
+    border: 0;
+    color: var(--clr-white);
+    font-weight: 700;
+    padding: 28px 32px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 24px 0;
+}
+
+.signForm-button :hover{
+    color: var(--clr-secondary);
+}

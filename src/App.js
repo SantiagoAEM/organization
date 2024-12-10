@@ -1,23 +1,27 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import './reset.css'
+import Header from './components/header/Header';
+import Form from './components/form/Form';
+import MiOrg from './components/MiOrg/MiOrg'
+
+
 
 function App() {
+
+  const [show,updateShow] = useState(true);   
+  const changeShow =() =>{
+    updateShow(!show)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container' >
+      <Header />
+      {/* {show === true ? <Form /> : <></>} */}
+       {show && <Form />}
+       
+      <MiOrg  changeShow={changeShow}/>     
+     
     </div>
   );
 }

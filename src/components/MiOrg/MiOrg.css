@@ -1,0 +1,15 @@
+.orgs{
+    
+}
+.orgs-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+    
+}
+.orgs-header h1{
+    padding-bottom: 24px;     
+    border-bottom: solid 4px var(--clr-primary);
+    margin: 0 auto;
+}
