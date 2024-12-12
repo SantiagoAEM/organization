@@ -1,0 +1,17 @@
+.teams{
+    text-align: center;   
+    padding:32px;
+}
+
+.teams h3{
+    display: inline;
+    border-bottom:4px solid;
+    padding-bottom: 8px;
+}
+
+.teams-colab{ 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 41px;
+}

@@ -57,6 +57,11 @@
     font-size: var(--fs-subtitles);
     font-weight: var(--fw-500);
   }
+  h3{
+    font-family: var(--ff-primary);
+    font-size: var(--fs-subtitles);
+    font-weight: var(--fw-400);
+  }
   .container{
     max-width: 1440px; 
     margin-inline: auto;

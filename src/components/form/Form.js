@@ -5,7 +5,7 @@ import OptionList from "../optionList/OptionList.js"
 import Button from "../button/button.js"
 
 
-const  Form = () =>{
+const  Form = (props) =>{
 
     const [nombre,setNombre] = useState ("");
     const [puesto,setPuesto] = useState ("");
@@ -47,6 +47,7 @@ return <section className="signForm">
             />
         <OptionList valor={equipo}
             setEquipo={setEquipo}
+            equipo={props.equipo}
         />
         <Button texto="Crear"/> 
     </form>

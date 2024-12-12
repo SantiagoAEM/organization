@@ -1,0 +1,18 @@
+
+.colabCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: var(--clr-white);  */
+
+    background: linear-gradient(to top, #f6f6f6 70%, #ccc 30%);
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px 0px #00000014;
+    
+}
+.colabCard img{
+    margin-top: 32px;
+    width:120px;
+    border-radius: 230px;
+}
