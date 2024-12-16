@@ -1,12 +1,17 @@
 import "./colab.css"
 
-const Colab = () => {
-    return <div className="colabCard">
-        <img src="https://github.com/harlandlohora.png" alt="fotografia collaborator"></img>
-        <div className="colabCard-text">
-            <h4>Genesys</h4>
-            <p className="colabCard-stdy">Desarrolladora de software e instructora</p>
-        </div>
+const Colab = (props) => {
+    const {nombre, puesto, foto, equipo} = props.datos
+    const {color} =props
+    return <div 
+        className="colabCard" 
+        style={{background:`linear-gradient(to top, #f6f6f6 60%,${color} 30%)`}}
+        >
+            <img src={foto} alt="fotografia collaborator"></img>
+            <div className="colabCard-text">
+                <h4>{nombre}</h4>
+                <p className="colabCard-stdy">{puesto}</p>
+            </div>
 
     </div>
 }

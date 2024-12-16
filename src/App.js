@@ -6,12 +6,28 @@ import Header from './components/header/Header';
 import Form from './components/form/Form';
 import MiOrg from './components/MiOrg/MiOrg'
 import Equipos from './components/equipos/equipos';
+import Footer from './components/collaborator/footer/footer';
 
 
 
 
 
 function App() {
+  const [show,updateShow] = useState(false);   
+  const [collaborators, updateCollaborators] = useState([]);
+  
+  const changeShow =() =>{
+    updateShow(!show)
+  }
+
+
+  //Collaborator registration
+  const regis = (collaborator) =>{
+    console.log("usuario registrado ", collaborator)
+    /// spread opertor
+    updateCollaborators([...collaborators,collaborator])
+  }
+
 
   //team list
   const teams =[
@@ -46,30 +62,31 @@ function App() {
       backgroundColor: "var(--clr-movil-bg)"
     },
     {
-      titulo: "Innovación y Gestión ",
+      titulo: "Innovación y Gestión",
       color: "var(--clr-innova)",
       backgroundColor: "var(--clr-innova-bg)"
     },
 
   ];
 
-  const [show,updateShow] = useState(false);   
-  const changeShow =() =>{
-    updateShow(!show)
-  }
-
   return (
     <div className='container' >
       <Header />
       {/* {show === true ? <Form /> : <></>} */}
-       {show && <Form equipo = {teams.map((equipo) => equipo.titulo)} />}
+       {show && <Form equipo = {teams.map((equipo) => equipo.titulo)}
+       regis={regis}
+       />}
        
       <MiOrg  changeShow={changeShow}/> 
  
       {
-        teams.map( (teams) => <Equipos data = {teams} key={teams.titulo}  />)
+        teams.map( (teams) => 
+        <Equipos data = {teams} 
+        key={teams.titulo} 
+        collaborators={collaborators.filter(collaborator => (collaborator.equipo === teams.titulo))}
+        />)
       }           
-     
+     <Footer />
     </div>
   );
 }

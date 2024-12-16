@@ -12,6 +12,8 @@ const  Form = (props) =>{
     const [foto,setFoto] = useState ("");
     const [equipo,setEquipo] = useState("");
 
+    const {regis} = props;
+
     const  eventSubmit = (e)=>{
         e.preventDefault()
         
@@ -21,7 +23,7 @@ const  Form = (props) =>{
             foto,
             equipo
         }
-        console.log(dataSend);
+        regis(dataSend);
     } 
 
 return <section className="signForm">
