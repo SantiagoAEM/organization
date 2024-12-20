@@ -13,3 +13,9 @@ font-family: var(--ff-secondary);
     outline-color:var(--clr-primary);
     margin:8px 0;
 }
+
+.input-color input{
+    height: 40px;
+    padding: 5px 20px;
+
+}

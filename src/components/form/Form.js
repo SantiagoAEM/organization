@@ -53,6 +53,26 @@ return <section className="signForm">
         />
         <Button texto="Crear"/> 
     </form>
+
+    <form onSubmit={eventSubmit}>
+        <h2>Rellena el formulario para crear el Equipo.</h2>
+        <InputForm 
+            titulo="Nombre" 
+            placeholder="Ingresar nombre..." 
+            required
+            valor={nombre}
+            setValor ={setNombre}
+        />
+        <InputForm 
+            titulo="Color"
+            placeholder="Ingresar puesto" 
+            required
+            valor={puesto}
+            setValor ={setPuesto}
+            type="color"
+        />
+        <Button texto="Crear equipo"/> 
+        </form>
 </section>
 }
 export default Form
